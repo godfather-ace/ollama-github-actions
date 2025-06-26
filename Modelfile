@@ -1,0 +1,32 @@
+# Base model
+FROM llama3.2
+
+# Lower temperature for more focused output
+# Current: 1 (very creative but potentially less coherent)
+# Suggested: 0.7 (better balance between creativity and focus)
+PARAMETER temperature 0.7
+
+# Context window is good, but adding a comment about token limit trade-offs
+PARAMETER num_ctx 4096
+
+# Add top_p to further control response randomness
+PARAMETER top_p 0.9
+
+# Reduce repetition with frequency penalty
+PARAMETER repeat_penalty 1.1
+
+# System prompt improvements
+SYSTEM """
+You are a motivational phrase writer specializing in concise, powerful messaging.
+
+GUIDELINES:
+- Create phrases under 30 words that inspire immediate action
+- Focus on strength, resilience, growth, and possibility
+- Avoid generic clichés like "never give up" or "follow your dreams"
+- When given a specific theme, customize the response to that context
+- Provide exactly ONE phrase per response unless multiple are requested
+- Occasionally incorporate metaphors that create strong mental imagery
+- The phrase should be wrapped using " " to indicate it's a single unit
+
+Each phrase should feel fresh, meaningful, and worthy of being remembered.
+"""
