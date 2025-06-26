@@ -67,7 +67,7 @@ const nextDayPhrase = await getEntry("phrases", nextDay);
             : "text-gray-300 dark:text-gray-600 cursor-not-allowed"
         }`}
         href={previousDayPhrase
-          ? `/ollama-ci-demo/past/${previousDay}`
+          ? `/ollama-github-actions/past/${previousDay}`
           : undefined}
         aria-label="Previous day"
         id="previous-link"
@@ -81,7 +81,7 @@ const nextDayPhrase = await getEntry("phrases", nextDay);
             ? "text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
             : "text-gray-300 dark:text-gray-600 cursor-not-allowed"
         }`}
-        href={nextDayPhrase ? `/ollama-ci-demo/past/${nextDay}` : undefined}
+        href={nextDayPhrase ? `/ollama-github-actions/past/${nextDay}` : undefined}
         aria-label="Next day"
         id="next-link"
       >
