@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://godfather-ace.github.io",
-  base: "ollama-ci-demo",
+  base: "ollama-github-actions",
   prefetch: {
     defaultStrategy: "viewport",
   },
